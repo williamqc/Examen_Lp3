@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.william.exam2.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:layout_width = "364dp"
+        android:layout_height = "43dp"
+        android:id = "@+id/editText"
+        android:hint = "Enter Name"
+        android:focusable = "true"
+        android:textColorHighlight = "#ff7eff15"
+        android:textColorHint = "#ffff25e6"
+        android:layout_alignParentLeft = "true"
+        android:layout_alignParentStart = "true"
+        android:layout_alignParentRight = "true"
+        android:layout_alignParentEnd = "true"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" /> />
+
+    <EditText
+        android:layout_width="372dp"
+        android:layout_height="43dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:textColorHint="#ffff299f"
+        android:hint="Password"
+        tools:layout_editor_absoluteY="68dp"
+        tools:layout_editor_absoluteX="-4dp" />
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:onClick="login"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="148dp"
+        android:layout_alignBaseline="@+id/btnAnswer"
+        android:layout_alignBottom="@+id/btnAnswer"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="17dp" />
+
+    <Button
+        android:id="@+id/btnAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:onClick="registrar"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="148dp"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp" />
+
+</RelativeLayout>
