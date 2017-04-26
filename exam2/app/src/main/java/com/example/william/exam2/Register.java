@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 
 import com.example.william.exam2.Bean.Usuario;
 
@@ -37,10 +38,6 @@ public class Register extends AppCompatActivity {
         Contraseña = (EditText) findViewById(R.id.Contraseña);
         Button btnSave = (Button)findViewById(R.id.btnSave);
 
-
-
-
-
         btnSave.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
@@ -55,7 +52,7 @@ public class Register extends AppCompatActivity {
     }
 
     public void goMain(){
-        Intent i = new Intent(this,Users.class);
+        Intent i = new Intent(this,MainActivity.class);
         startActivity(i);
     }
 

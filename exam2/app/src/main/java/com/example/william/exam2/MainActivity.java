@@ -1,7 +1,9 @@
 package com.example.william.exam2;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +14,14 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import com.example.william.exam2.Bean.Usuario;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import com.example.william.exam2.Users;
+
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,22 +39,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
+
+    public void getData() {
+
+  }
 
 
     public void registrar(View view){
         Intent register = new Intent(this, Register.class);
         startActivity(register);
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void login(View view) {
         EditText username = (EditText) findViewById(R.id.editText);
         EditText password = (EditText) findViewById(R.id.editText2);
-        if (username.getText().toString().equals("admin")&& password.getText().toString().equals("admin")) {
-            Intent p = new Intent(this, Users.class);
-            startActivity(p);
-        } else {
-            //wrong password
+        for (Usuario us : Users.listUser) {
+            if (Objects.equals(username.getText().toString(), us.getUser()) && Objects.equals(password.getText().toString(), us.getContraseña())) {
+                Intent p = new Intent(this, Users.class);
+                startActivity(p);
+            } else {
+                //wrong password
+            }
         }
+
     }
 
     @Override

@@ -31,6 +31,7 @@ public class Users extends AppCompatActivity {
 
         listView.setAdapter(arrayAdapter);
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
