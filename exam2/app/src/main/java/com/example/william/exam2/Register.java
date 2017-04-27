@@ -29,8 +29,7 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
 
         Nombre = (EditText) findViewById(R.id.Nombre);
         Apellido =(EditText) findViewById(R.id.Apellidos);
@@ -43,7 +42,7 @@ public class Register extends AppCompatActivity {
 
                     Random rn = new Random();
                     int answer = rn.nextInt(1000) + 1;
-                    Users.listUser.add(new Usuario(answer,Nombre.getText().toString(),Apellido.getText().toString(),Usuario.getText().toString(),Contraseña.getText().toString()));
+                    Tab01User.listUser.add(new Usuario(answer,Nombre.getText().toString(),Apellido.getText().toString(),Usuario.getText().toString(),Contraseña.getText().toString()));
                     goMain();
             }
         });

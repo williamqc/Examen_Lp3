@@ -1,7 +1,5 @@
 package com.example.william.exam2.Bean;
 
-import com.example.william.exam2.Users;
-
 /**
  * Created by William on 25/04/2017.
  */
