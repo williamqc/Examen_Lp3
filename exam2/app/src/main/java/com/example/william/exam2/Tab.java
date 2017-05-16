@@ -16,6 +16,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Tab extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -77,7 +80,7 @@ public class Tab extends AppCompatActivity {
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
-
+//TARE TAPS DINAMICOS con escrolll y  coneccion a base de datos
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
@@ -105,6 +108,8 @@ public class Tab extends AppCompatActivity {
             // Show 3 total pages.
             return 3;
         }
+        List<String>list  =new ArrayList<>();
+
 
         @Override
         public CharSequence getPageTitle(int position) {

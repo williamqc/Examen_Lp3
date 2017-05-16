@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import com.example.william.exam2.Bean.Usuario;
 
 import java.util.Objects;
@@ -42,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent p = new Intent(this, Tab.class);
                 startActivity(p);
             } else {
-                //wrong password
+               username.setText("");
+                password.setText("");
+               // Toast.makeText(getApplicationContext(),"Usuario",T)
             }
         }
 

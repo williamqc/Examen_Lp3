@@ -35,22 +35,25 @@ public class Register extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Nombre = (EditText) findViewById(R.id.Nombre);
-        Apellido =(EditText) findViewById(R.id.Apellidos);
+        Apellido = (EditText) findViewById(R.id.Apellidos);
         Usuario = (EditText) findViewById(R.id.Usuario);
         Contraseña = (EditText) findViewById(R.id.Contraseña);
-        Button btnSave = (Button)findViewById(R.id.btnSave);
+        Button btnSave = (Button) findViewById(R.id.btnSave);
 
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
+
+
+            btnSave.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
 
                     Random rn = new Random();
                     int answer = rn.nextInt(1000) + 1;
-                    Tab01User.listUser.add(new Usuario(answer,Nombre.getText().toString(),Apellido.getText().toString(),Usuario.getText().toString(),Contraseña.getText().toString()));
+
+                    Tab01User.listUser.add(new Usuario(answer, Nombre.getText().toString(), Apellido.getText().toString(), Usuario.getText().toString(), Contraseña.getText().toString()));
+
                     goMain();
-            }
-        });
 
-
+                }
+            });
 
 
 
